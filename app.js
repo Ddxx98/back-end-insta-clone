@@ -44,5 +44,5 @@ app.get('/data',async(req,res)=>{
         posts
     }) 
 })
-
-app.listen(5000,()=>console.log("Server is listening on 5000"))
+const port = process.env.Port || 5000
+app.listen(port,()=>console.log("Server is listening on 5000"))
