@@ -9,7 +9,7 @@ const app = express()
 app.use(methodOverride())
 app.use(cors())
 const MONGO_URI = 'mongodb+srv://Ddxx:deexith@data.tm6kj.mongodb.net/User?retryWrites=true&w=majority'
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_URI || MONGO_URI)
     .then(()=>{console.log("Connected to database")}).catch((err)=>{
     console.log("Error")
 });
