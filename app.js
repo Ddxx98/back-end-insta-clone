@@ -15,6 +15,10 @@ mongoose.connect('mongodb+srv://Ddxx:deexith@data.tm6kj.mongodb.net/User?retryWr
 
 app.use(bodyParser());
 
+app.get('/',(req,res)=>{
+    res.send('Deekshith')
+})
+
 app.post("/addData", async(req, res) => {
     try {
         var date = new Date().toLocaleDateString()
