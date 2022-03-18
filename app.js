@@ -4,6 +4,7 @@ const mongoose = require("mongoose")
 const cors = require('cors')
 const Data = require('./model/userData')
 const methodOverride = require('method-override')
+require('dotenv').config()
 
 const app = express()
 app.use(methodOverride())
@@ -49,5 +50,5 @@ app.get('/data',async(req,res)=>{
         posts
     }) 
 })
-const port = process.env.Port || 5000
+const port = process.env.PORT || 5000
 app.listen(port,()=>console.log("Server is listening on 5000"))
